@@ -1,0 +1,4 @@
+- name: Elasticsearch with SSL/TLS enabled
+  hosts: “{{ variable_host }}"
+  roles:
+    - role: elasticsearch
