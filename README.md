@@ -1,5 +1,5 @@
 This project uses terraform to provision AWS resources needed for creating Elasticsearch cluster.
-Ansible with dynamic inventory is used to provision Elasticsearch cluster.
+Ansible with dynamic inventory is used to provision Elasticsearch cluster.                                                
 
 Initialize and run terraform:
     terraform init
