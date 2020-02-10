@@ -10,7 +10,7 @@ es_config:
   xpack.security.authc.realms.file.file1.order: 0
   xpack.security.authc.realms.native.native1.order: 1
 
-es_heap_size: 1g
+es_heap_size: 300m
 es_api_basic_auth_username: elastic
 es_api_basic_auth_password: "{{vault_es_api_basic_auth_password}}"
 es_enable_http_ssl: true

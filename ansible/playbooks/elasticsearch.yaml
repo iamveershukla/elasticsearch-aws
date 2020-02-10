@@ -1,4 +1,6 @@
 - name: Elasticsearch with SSL/TLS enabled
-  hosts: “{{ variable_host }}"
+  hosts: tag_Project_elasticsearch
   roles:
     - role: elasticsearch
+  vars_files:
+    - "vault.yml"
