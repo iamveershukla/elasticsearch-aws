@@ -8,9 +8,9 @@
 * Assumptions: Scripts use dev Profile and Region 'ap-south-1' in provider.tf. Key elasticsearch_key should be present in corresponding account and region.
 
 * Initialize and run terraform:
-    * terraform init .
-    * terraform plan -out elasticsearch.plan .
-    * terraform apply elasticsearch.plan .
+    * terraform init
+    * terraform plan -out elasticsearch.plan
+    * terraform apply elasticsearch.plan
 
 # Ansible
 
