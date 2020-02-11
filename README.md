@@ -5,9 +5,7 @@
 
 # Terraform
 
-* Assumptions:
-
-* Scripts use dev Profile and Region 'ap-south-1'. Update provider.tf for other region and profiles.
+* Assumptions: Scripts use dev Profile and Region 'ap-south-1' in provider.tf. Key elasticsearch_key should be present in corresponding account and region.
 
 * Initialize and run terraform:
     * terraform init .
@@ -16,9 +14,7 @@
 
 # Ansible
 
-* Prerequisites
-
-* Ansible requires python boto library for Dynamic inventory.
+* Prerequisites: Ansible requires python boto library for Dynamic inventory. Private key file elasticsearch_key.pem is present in ~/.ssh/ directory.
 
 # Running Ansible Scripts
 
