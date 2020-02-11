@@ -1,6 +1,7 @@
 ---
 - name: Update nofile limits in /etc/security/limits.conf file
   pam_limits:
+    become: yes
     domain: '*'
     limit_type: soft
     limit_item: nofile
@@ -8,6 +9,7 @@
 
 - name: Update nofile limits in /etc/security/limits.conf file
   pam_limits:
+    become: yes
     domain: '*'
     limit_type: hard
     limit_item: nofile
