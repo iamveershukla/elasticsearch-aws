@@ -4,7 +4,7 @@
     domain: '*'
     limit_type: soft
     limit_item: nofile
-    value: 4096
+    value: 65535
   become: yes
 
 - name: Update nofile limits in /etc/security/limits.conf file
@@ -12,5 +12,21 @@
     domain: '*'
     limit_type: hard
     limit_item: nofile
+    value: 65535
+  become: yes
+
+- name: Update nofile limits in /etc/security/limits.conf file
+  pam_limits:
+    domain: '*'
+    limit_type: soft
+    limit_item: nproc
+    value: 4096
+  become: yes
+
+- name: Update nofile limits in /etc/security/limits.conf file
+  pam_limits:
+    domain: '*'
+    limit_type: hard
+    limit_item: nproc
     value: 4096
   become: yes
