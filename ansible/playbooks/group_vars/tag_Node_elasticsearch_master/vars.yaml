@@ -2,6 +2,7 @@ es_config:
   node.name: "elasticmaster"
   cluster.name: "go-cluster"
   discovery.seed_hosts: "localhost:9300"
+  network.host: 0.0.0.0
   http.port: 9200
   transport.port: 9300
   node.data: false
@@ -24,7 +25,7 @@ es_ssl_certificate_authority: "files/certs/my-ca.p12"
 es_ssl_certificate_path: "{{ es_conf_dir }}/certs"
 es_ssl_verification_mode: "certificate"
 
-es_heap_size: 2g
+es_heap_size: 350m
 es_api_basic_auth_username: elastic
 es_api_basic_auth_password: "{{vault_es_api_basic_auth_password}}"
 
