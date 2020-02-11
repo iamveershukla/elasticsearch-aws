@@ -15,7 +15,7 @@
     value: 65535
   become: yes
 
-- name: Update nofile limits in /etc/security/limits.conf file
+- name: Update nproc limits in /etc/security/limits.conf file
   pam_limits:
     domain: '*'
     limit_type: soft
@@ -23,7 +23,7 @@
     value: 4096
   become: yes
 
-- name: Update nofile limits in /etc/security/limits.conf file
+- name: Update nproc limits in /etc/security/limits.conf file
   pam_limits:
     domain: '*'
     limit_type: hard
