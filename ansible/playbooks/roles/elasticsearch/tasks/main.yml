@@ -25,6 +25,11 @@
   include: snapshot-release.yml
   when: es_use_snapshot_release
 
+- name: include prerequisites.yml
+  include: prerequisites.yml
+  tags:
+      - prerequisites
+
 - name: include java.yml
   include: java.yml
   when: es_java_install
