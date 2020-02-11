@@ -1,9 +1,0 @@
-- name: Elasticsearch with SSL/TLS enabled
-  hosts: tag_Project_elasticsearch
-  
-  tasks:
-    - name: sleep
-      command: sleep 300
-      
-    - name: ensure apache is at the latest version
-      ping:

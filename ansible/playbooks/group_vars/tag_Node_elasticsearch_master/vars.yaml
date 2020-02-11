@@ -1,13 +1,14 @@
 es_config:
   node.name: "elasticmaster"
   cluster.name: "go-cluster"
-  discovery.seed_hosts: "localhost:9300"
+  discovery.seed_hosts: "elasticmaster"
+  cluster.initial_master_nodes: "elasticmaster"
   network.host: 0.0.0.0
   http.port: 9200
   transport.port: 9300
-  node.data: false
+  node.data: true
   node.master: true
-  bootstrap.memory_lock: true
+  bootstrap.memory_lock: false
   xpack.security.authc.realms.file.file1.order: 0
   xpack.security.authc.realms.native.native1.order: 1
 
@@ -16,6 +17,7 @@ es_group: elasticsearch
 es_xpack_trial: true
 es_enable_http_ssl: true
 es_enable_transport_ssl: true
+es_api_host: "{{ ec2_ip_address }}"
 
 es_ssl_keystore: "files/certs/my-keystore.p12"
 es_ssl_keystore_password: "{{vault_es_ssl_keystore_password}}"
@@ -25,7 +27,7 @@ es_ssl_certificate_authority: "files/certs/my-ca.p12"
 es_ssl_certificate_path: "{{ es_conf_dir }}/certs"
 es_ssl_verification_mode: "certificate"
 
-es_heap_size: 350m
+es_heap_size: 400m
 es_api_basic_auth_username: elastic
 es_api_basic_auth_password: "{{vault_es_api_basic_auth_password}}"
 
